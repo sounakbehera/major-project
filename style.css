@@ -1,4 +1,37 @@
-body{
-    background-color: black;
-    color: rgb(25, 24, 24);
+.hero-container h1 {
+
+    overflow: hidden;
+    /*Ensures the content is not revealed untill the animation */
+    border-right: 0.15em solid rgb(248, 246, 244);
+    /* the typwriter cursor */
+    white-space: nowrap;
+    /* keeps the content on a single line */
+    margin: 0 auto;
+    /* gives that scrolling effect as the typing happens */
+    animation: typing 6s steps(50, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: rgb(249, 248, 246);
+    }
 }
